@@ -30,16 +30,15 @@ This project is the frontend for a food ordering website developed as part of th
    npm -v
 
 2. Create React App with Vite
-```bash
-npm create vite@latest
-cd goannapurna
-npm install
-npm run dev
+   ```bash
+   npm create vite@latest
+   cd goannapurna
+   npm install
+   npm run dev
 
-
-3. Install React Router
-```bash
-npm install react-router-dom
+4. Install React Router
+    ```bash
+   npm install react-router-dom
 
 
 /src
