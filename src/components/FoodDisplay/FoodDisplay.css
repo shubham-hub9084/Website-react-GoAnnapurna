@@ -1,0 +1,27 @@
+.food-display {
+  padding: 60px 5vw;
+  background-color: #fff;
+}
+
+.food-display h2 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: #222;
+}
+
+.food-display-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  justify-content: center;
+}
+
+/* Optional: Smooth entrance animation */
+.food-display-list > * {
+  transition: transform 0.3s ease;
+}
+.food-display-list > *:hover {
+  transform: translateY(-6px);
+}
+

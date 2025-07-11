@@ -1,0 +1,98 @@
+/* FOR NAVIGATION BAR */
+.navbar{
+    padding: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo{
+    width: 150px;
+}
+
+.navbar-menu{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    color: grey;
+    font-size: 18px;
+}
+.navbar-right{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.navbar button{
+    background-color: transparent;
+    font-size: 16px;
+    color: coral;                       /*for button background i.e search */
+    border: 1px solid tomato;
+    padding: 10px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* for effect */
+.navbar button:hover {
+  background-color: #ff914d;  /* Change to your preferred color */
+  color: #ffffff;
+}
+
+.navbar .active{
+    padding-bottom: 2px;
+    border-bottom: 2px solid rgb(73, 33, 61);
+}
+.navbar-menu li {
+  position: relative;
+  cursor: pointer;
+  padding: 10px 15px;
+  font-weight: 500;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+/* Underline effect */
+.navbar-menu li::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0%;
+  background-color: #ff914d; /* Change this to match your theme */
+  transition: width 0.3s ease;
+}
+
+.navbar-menu li:hover::after,
+.navbar-menu li.active::after {
+  width: 100%;
+}
+
+.navbar-search-icon {
+  position: relative;
+  display: inline-block;
+}
+
+.navbar-search-icon .dot {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: tomato;
+  border-radius: 50%;
+  top: -6px;  /* Slightly adjusted */
+  right: -6px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);  /* Optional: subtle glow */
+}
+@media (max-width: 1050px) {
+    .navbar-menu {
+        gap: 20px; /* Reduce gap between menu items */
+        font-size: 17px; /* Slightly smaller font size */
+    }
+    .navbar .logo {
+        width: 140px; /* Adjust logo size for smaller screens */
+    }
+    .navbar-right {
+        gap: 20px; /* Reduce gap between right items */
+    }
+}

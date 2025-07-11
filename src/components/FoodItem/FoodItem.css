@@ -1,0 +1,239 @@
+/* ======= Food Item Card ======= */
+.food-item,
+.food-card {
+  width: 100%;
+  max-width: 270px;
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.food-item:hover,
+.food-card:hover {
+  transform: translateY(-5px);
+}
+
+/* ======= Image Container ======= */
+.food-item-img-container,
+.food-image-container {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  position: relative;
+}
+
+.food-item-image,
+.food-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ======= Overlay & Top/Bottom Info ======= */
+.food-overlay {
+  position: absolute;
+  inset: 0;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent 70%);
+  color: #ffffff;
+  border-radius: inherit;
+}
+
+.food-overlay-top,
+.food-overlay-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.food-overlay-top h3 {
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
+  font-weight: 600;
+  margin: 0;
+}
+
+.food-price {
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  font-weight: 500;
+  color: #ffe100;
+}
+
+.food-overlay-bottom img {
+  width: 80px;
+}
+
+/* ======= Info and Description ======= */
+.food-item-info {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.food-item-name-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.food-item-name {
+  font-weight: 600;
+  font-size: clamp(0.95rem, 2.5vw, 1rem);
+}
+
+.food-item-price {
+  font-weight: 500;
+  color: #ff4d4d;
+}
+
+.food-description,
+.food-item-desc {
+  padding: 10px 12px;
+  font-size: clamp(0.9rem, 2vw, 0.95rem);
+  color: #555;
+  line-height: 1.4;
+  background-color: #fff;
+}
+
+/* ======= Buttons ======= */
+.food-item-actions,
+.food-action {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.add-btn {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-size: clamp(0.85rem, 2vw, 1rem);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-btn:hover {
+  background-color: #e03131;
+}
+
+.food-item-counter,
+.food-counter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
+
+.food-item-counter button,
+.food-counter button {
+  background-color: #ff4d4d;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.food-item-counter button:hover,
+.food-counter button:hover {
+  background-color: #e03131;
+}
+
+.food-item-counter span,
+.food-counter span {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* ======= Grid Layout ======= */
+.food-display-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 30px;
+  padding: 20px 5vw;
+  justify-items: center;
+}
+
+/* ======= Responsive Breakpoints ======= */
+@media (max-width: 1024px) {
+  .food-display-list {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 24px;
+  }
+
+  .food-item,
+  .food-card {
+    max-width: 240px;
+  }
+
+  .food-overlay-bottom img {
+    width: 70px;
+  }
+}
+
+@media (max-width: 768px) {
+  .food-display-list {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+  }
+
+  .add-btn {
+    padding: 6px 14px;
+  }
+
+  .food-item-counter button,
+  .food-counter button {
+    width: 28px;
+    height: 28px;
+  }
+
+  .food-item-counter span,
+  .food-counter span {
+    font-size: 0.9rem;
+  }
+
+  .food-overlay-bottom img {
+    width: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .food-display-list {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 16px 3vw;
+  }
+
+  .food-item,
+  .food-card {
+    max-width: 100%;
+  }
+
+  .food-overlay-top h3 {
+    font-size: 1rem;
+  }
+
+  .food-price {
+    font-size: 0.9rem;
+  }
+
+  .food-overlay-bottom img {
+    width: 50px;
+  }
+
+  .add-btn {
+    font-size: 0.85rem;
+    padding: 5px 12px;
+  }
+}
